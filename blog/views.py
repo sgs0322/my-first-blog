@@ -11,6 +11,11 @@ def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
 
+def homePage(request):
+    images = ['RockTop', 'TheThree', 'ThreeBoys']
+    background_image = 'static/' + images[random.randint(0,2)] + '.JPG'
+    return render(request, 'post_list.html', {'background_image': background_image})
+
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
@@ -89,3 +94,4 @@ def comment_remove(request, pk):
     post_pk = comment.post.pk
     comment.delete()
     return redirect('post_detail', pk=post_pk)
+
