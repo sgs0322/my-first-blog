@@ -14,8 +14,12 @@
     margin-left: 200px;
 }
 
+.content_side_menu {
+   float: left;
+}
+
 .content_padding {
-    padding: 150px 10px 10px 10px;
+    padding: 100px 10px 10px 10px;
 }
 
 h1, h2, h3, h4 {
@@ -50,7 +54,7 @@ h1, h2, h3, h4 {
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 5px;
 }
 
 .post h1 a, .post h1 a:visited {

@@ -11,6 +11,20 @@ def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
 
+def look_book_list(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/look_book.html', {'posts': posts})
+
+def look_book_16ss_list(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/look_book_16ss.html', {'posts': posts})
+def look_book_16fw_list(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/look_book_16fw.html', {'posts': posts})
+def look_book_17ss_list(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/look_book_17ss.html', {'posts': posts})
+
 def homePage(request):
     images = ['RockTop', 'TheThree', 'ThreeBoys']
     background_image = 'static/' + images[random.randint(0,2)] + '.JPG'

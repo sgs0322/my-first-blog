@@ -5,6 +5,10 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^$', views.post_list, name='post_list'),
+    url(r'^look_book/$', views.look_book_list, name='look_book_list'),
+    url(r'^look_book_16ss/$', views.look_book_16ss_list, name='look_book_list_16ss'),
+    url(r'^look_book_16fw/$', views.look_book_16fw_list, name='look_book_list_16fw'),
+    url(r'^look_book_17ss/$', views.look_book_17ss_list, name='look_book_list_17ss'),
     url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),
     url(r'^post/new/$', views.post_new, name='post_new'),
     url(r'^drafts/$', views.post_draft_list, name='post_draft_list'),

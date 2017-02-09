@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">  
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             {% if user.is_authenticated %}
                 <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
@@ -25,19 +25,16 @@
             {% endif %}
             <a href="/"><h2>H.mo on</h2></a>
             <ul class="nav nav-pills" style="display: table; margin: auto; padding:0;">
+              <li><a href="/">About Us</a></li>
+              <li><a href="{% url 'look_book_list_16ss' %}">Look Book</a></li>
               <li><a href="/">Online Shop</a></li>
-              <li><a href="/">Look Book</a></li>
-              <li><a href="/">News</a></li>
               <li><a href="/">Contact</a></li>
             </ul>
-        </nav>
-        <div class="content container">
-            <div class="content_padding">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-                </div>
-            </div>
+        </nav>   
+        {% block content %}
+        {% endblock %}
+        <div>
+        <small>각종 사업자 등록 번호 및 연락처를 넣을 예정</small>
         </div>
     </body>
 </html>

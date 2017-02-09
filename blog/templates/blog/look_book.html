@@ -1,0 +1,18 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+	<div class="content_side_menu" style="padding-top: 140px">
+	<div><a>16 S/S</a></div>
+	<div><a>16 F/W</a></div>
+	<div><a>17 S/S</a></div>
+	</div>
+	{% for post in posts %}
+        {% if post.photo %}
+			<div class="content container">
+		        <div class="content_padding">
+				    		<img src="{{ post.photo.url }}" height="650" width="700"style="display: table; margin: left;" />		   
+		        </div>
+		    </div>
+ 	   {% endif %}
+    {% endfor %}
+{% endblock content %}
