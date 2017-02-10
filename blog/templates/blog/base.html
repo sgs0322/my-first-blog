@@ -23,7 +23,7 @@
             {% else %}
                 <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
             {% endif %}
-            <a href="/"><h2>H.mo on</h2></a>
+            <a href="/"><img src="../../../media/logo2.png" height="70px" width="120px" style="padding-left: 15px"></a>
             <ul class="nav nav-pills" style="display: table; margin: auto; padding:0;">
               <li><a href="/">About Us</a></li>
               <li><a href="{% url 'look_book_list_16ss' %}">Look Book</a></li>
@@ -33,8 +33,14 @@
         </nav>   
         {% block content %}
         {% endblock %}
-        <div>
-        <small>각종 사업자 등록 번호 및 연락처를 넣을 예정</small>
+        <div class="xans-element- xans-layout xans-layout-footer "><div class="helpdesk">
+            <p class="foot_phone">OFFICE 070-7726-5252</p>
+            <p class="foot_phone">FLAGSHIP STORE 070-8848-5253</p>
+            <p> FAX 02-2066-5253 </p>
+            
+
+            <p>Mon - Fri. PM 10:00 - PM 07:00 <span class="bar">/</span> Sat, Sun &amp; Holiday OFF</p>
+            <p>KIUP BANK <span class="bar">/</span>478-060742-01-010 <span class="bar">/</span> (주)오아이스튜디오</p>
         </div>
     </body>
 </html>

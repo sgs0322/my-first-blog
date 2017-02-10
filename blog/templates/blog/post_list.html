@@ -1,9 +1,14 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    {% for post in posts %}
+	<div id="slideShowImages" style="margin:auto">
+    	{% for post in posts %}
             {% if post.photo %}
-		    	<img src="{{ post.photo.url }}" height="110%" width="100%"style="display: table; margin: auto; padding:0;" />
+		    	<img src="{{ post.photo.url }}" height="800px" width="1200px" style="padding-top: 125px" />
 			{% endif %}   
-    {% endfor %}
+    	{% endfor %}
+    	
+    </div>
+  	<script src="../../static/js/slideShow.js"></script>
+
 {% endblock content %}
